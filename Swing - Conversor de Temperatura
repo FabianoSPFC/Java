@@ -1,0 +1,264 @@
+import java.text.DecimalFormat;
+//import javax.swing.JSlider;
+/**
+ *
+ * @author Fabiano Filho
+ */
+public class Interface1 extends javax.swing.JFrame {
+    public Interface1() {
+        initComponents();
+    }
+
+    @SuppressWarnings("unchecked")
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
+    private void initComponents() {
+
+        jSlider1 = new javax.swing.JSlider();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel1 = new javax.swing.JLabel();
+        jSlider5 = new javax.swing.JSlider();
+        jSlider2 = new javax.swing.JSlider();
+        Temp_Kel = new javax.swing.JSlider();
+        Temp_Cel = new javax.swing.JSlider();
+        Temp_Far = new javax.swing.JSlider();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        Label_Cel = new javax.swing.JLabel();
+        Label_Far = new javax.swing.JLabel();
+        Label_Kel = new javax.swing.JLabel();
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane1.setViewportView(jTextArea1);
+
+        jLabel1.setText("jLabel1");
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        Temp_Kel.setMajorTickSpacing(37);
+        Temp_Kel.setMaximum(373);
+        Temp_Kel.setOrientation(javax.swing.JSlider.VERTICAL);
+        Temp_Kel.setPaintLabels(true);
+        Temp_Kel.setPaintTicks(true);
+        Temp_Kel.setValue(0);
+        Temp_Kel.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                Temp_KelStateChanged(evt);
+            }
+        });
+
+        Temp_Cel.setMajorTickSpacing(20);
+        Temp_Cel.setMinimum(-100);
+        Temp_Cel.setOrientation(javax.swing.JSlider.VERTICAL);
+        Temp_Cel.setPaintLabels(true);
+        Temp_Cel.setPaintTicks(true);
+        Temp_Cel.setValue(0);
+        Temp_Cel.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                Temp_CelStateChanged(evt);
+            }
+        });
+        Temp_Cel.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
+            public void mouseMoved(java.awt.event.MouseEvent evt) {
+                Temp_CelMouseMoved(evt);
+            }
+        });
+
+        Temp_Far.setMajorTickSpacing(40);
+        Temp_Far.setMaximum(220);
+        Temp_Far.setMinimum(-200);
+        Temp_Far.setOrientation(javax.swing.JSlider.VERTICAL);
+        Temp_Far.setPaintLabels(true);
+        Temp_Far.setPaintTicks(true);
+        Temp_Far.setValue(0);
+        Temp_Far.addChangeListener(new javax.swing.event.ChangeListener() {
+            public void stateChanged(javax.swing.event.ChangeEvent evt) {
+                Temp_FarStateChanged(evt);
+            }
+        });
+
+        jButton1.setText("Sair");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jLabel2.setText("Celsius");
+
+        jLabel3.setText("Farenheit");
+
+        jLabel4.setText("Kelvin");
+
+        Label_Cel.setText("0");
+
+        Label_Far.setText("0");
+
+        Label_Kel.setText("0");
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Temp_Cel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Label_Cel, javax.swing.GroupLayout.PREFERRED_SIZE, 64, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(37, 37, 37)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addComponent(Temp_Far, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(Label_Far, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 55, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(jButton1)
+                                .addContainerGap())
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(Temp_Kel, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(20, 20, 20))))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(Label_Kel, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(30, 30, 30)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel4))
+                .addGap(52, 52, 52)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(Temp_Kel, javax.swing.GroupLayout.DEFAULT_SIZE, 247, Short.MAX_VALUE)
+                    .addComponent(Temp_Far, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(Temp_Cel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(Label_Kel, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Label_Far, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Label_Cel, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(33, 33, 33))
+        );
+
+        pack();
+    }// </editor-fold>                        
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {                                         
+        this.dispose();
+    }                                        
+
+    private void Temp_CelMouseMoved(java.awt.event.MouseEvent evt) {                                    
+
+    }                                   
+
+    private void Temp_CelStateChanged(javax.swing.event.ChangeEvent evt) {                                      
+       DecimalFormat df = new DecimalFormat("###,##0.00");
+       Label_Cel.setText(Integer.toString(Temp_Cel.getValue()));
+       Label_Far.setText(Integer.toString(Temp_Cel.getValue()));
+       Label_Kel.setText(Integer.toString(Temp_Cel.getValue()));
+       double Cel = Double.parseDouble(Double.toString(Temp_Cel.getValue()));
+       double Far = Cel * 1.8 + 32;
+       Label_Far.setText(""+df.format(Far));
+       //Temp_Cel.setValue((Label_Cel.getText()));
+       double Kel = Cel + 273;
+       Label_Kel.setText(""+df.format(Kel));
+    }                                     
+
+    private void Temp_FarStateChanged(javax.swing.event.ChangeEvent evt) {                                      
+        DecimalFormat df = new DecimalFormat("###,##0.00");
+        Label_Far.setText(Integer.toString(Temp_Far.getValue()));
+        Label_Cel.setText(Integer.toString(Temp_Far.getValue()));
+        Label_Kel.setText(Integer.toString(Temp_Far.getValue()));
+        double Fare = Double.parseDouble(Double.toString(Temp_Far.getValue()));
+        double Celc = (Fare - 32)/1.8;
+        Label_Cel.setText(""+df.format(Celc));
+        double Kelv = ((5*Fare + 2297)/9);
+        Label_Kel.setText(""+df.format(Kelv));
+    }                                     
+
+    private void Temp_KelStateChanged(javax.swing.event.ChangeEvent evt) {                                      
+        DecimalFormat df = new DecimalFormat("###,##0.00");
+        Label_Kel.setText(Integer.toString(Temp_Kel.getValue()));
+        Label_Cel.setText(Integer.toString(Temp_Kel.getValue()));
+        Label_Far.setText(Integer.toString(Temp_Kel.getValue()));
+        double Kelvin = Double.parseDouble(Double.toString(Temp_Kel.getValue()));
+        double Celsius = (Kelvin - 273);
+        Label_Cel.setText(""+df.format(Celsius));
+        double Farenheit = ((9*Kelvin - 2297)/5);
+        Label_Far.setText(""+df.format(Farenheit));
+    }                                     
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Interface1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Interface1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Interface1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Interface1.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Interface1().setVisible(true);
+            }
+        });
+    }
+
+    // Variables declaration - do not modify                     
+    private javax.swing.JLabel Label_Cel;
+    private javax.swing.JLabel Label_Far;
+    private javax.swing.JLabel Label_Kel;
+    private javax.swing.JSlider Temp_Cel;
+    private javax.swing.JSlider Temp_Far;
+    private javax.swing.JSlider Temp_Kel;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSlider jSlider1;
+    private javax.swing.JSlider jSlider2;
+    private javax.swing.JSlider jSlider5;
+    private javax.swing.JTextArea jTextArea1;
+    // End of variables declaration                   
+
+}
